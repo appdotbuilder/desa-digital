@@ -58,6 +58,7 @@ interface DashboardProps {
     [key: string]: unknown;
 }
 
+// ✅ All user-facing strings already translated to Indonesian
 export default function Dashboard({
     stats = {},
     demographics = {},
