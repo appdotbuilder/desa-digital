@@ -7,49 +7,49 @@ export default function Welcome() {
     const features = [
         {
             icon: '👥',
-            title: 'Citizen Management',
-            description: 'Complete digital records of village citizens with demographics and family data'
+            title: 'Manajemen Warga',
+            description: 'Catatan digital lengkap warga desa dengan data demografi dan keluarga'
         },
         {
             icon: '📝',
-            title: 'Letter Services',
-            description: 'Online letter submissions with approval workflow from RT to Village Head'
+            title: 'Layanan Surat',
+            description: 'Pengajuan surat online dengan alur persetujuan dari RT hingga Kepala Desa'
         },
         {
             icon: '📊',
-            title: 'Analytics & Reports',
-            description: 'Real-time statistics and detailed reports on population and administrative services'
+            title: 'Analitik & Laporan',
+            description: 'Statistik real-time dan laporan detail mengenai populasi dan layanan administrasi'
         },
         {
             icon: '📰',
-            title: 'News & Announcements',
-            description: 'Village news management with approval system and public announcements'
+            title: 'Berita & Pengumuman',
+            description: 'Manajemen berita desa dengan sistem persetujuan dan pengumuman publik'
         },
         {
             icon: '📸',
-            title: 'Village Gallery',
-            description: 'Document village activities, facilities, and development projects'
+            title: 'Galeri Desa',
+            description: 'Dokumentasi kegiatan desa, fasilitas, dan proyek pembangunan'
         },
         {
             icon: '🏘️',
-            title: 'Multi-Tenant SaaS',
-            description: 'Isolated data management for multiple villages with subscription management'
+            title: 'SaaS Multi-Tenant',
+            description: 'Manajemen data terisolasi untuk banyak desa dengan manajemen langganan'
         }
     ];
 
     const roles = [
-        { role: 'Super Admin', access: 'Global village management, subscription packages, billing' },
-        { role: 'Village Admin', access: 'Citizen data entry, news management, manual letter input' },
-        { role: 'Village Head', access: 'Final letter approvals, reports, news approval' },
-        { role: 'RW Chairman', access: 'RW area citizen management, letter verification' },
-        { role: 'RT Chairman', access: 'RT area citizen management, letter verification' },
-        { role: 'Citizen', access: 'Online letter submission, status tracking, village news' }
+        { role: 'Super Admin', access: 'Manajemen desa global, paket langganan, penagihan' },
+        { role: 'Admin Desa', access: 'Entry data warga, manajemen berita, input surat manual' },
+        { role: 'Kepala Desa', access: 'Persetujuan akhir surat, laporan, persetujuan berita' },
+        { role: 'Ketua RW', access: 'Manajemen warga area RW, verifikasi surat' },
+        { role: 'Ketua RT', access: 'Manajemen warga area RT, verifikasi surat' },
+        { role: 'Warga', access: 'Pengajuan surat online, pelacakan status, berita desa' }
     ];
 
     return (
         <>
-            <Head title="Village Information System - Digital Village Management">
-                <meta name="description" content="Comprehensive SaaS-based village information system for digital citizen and administrative data management with multi-tenancy support" />
+            <Head title="Sistem Informasi Desa - Manajemen Desa Digital">
+                <meta name="description" content="Platform SaaS komprehensif untuk sistem informasi desa dalam manajemen data warga dan administratif digital dengan dukungan multi-tenancy" />
                 <link rel="preconnect" href="https://fonts.bunny.net" />
                 <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
             </Head>
@@ -59,7 +59,7 @@ export default function Welcome() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between items-center h-16">
                             <div className="flex items-center">
-                                <h1 className="text-xl font-bold text-gray-900 dark:text-white">🏘️ VillageHub</h1>
+                                <h1 className="text-xl font-bold text-gray-900 dark:text-white">🏘️ DesaHub</h1>
                             </div>
                             <nav className="flex items-center space-x-4">
                                 {auth.user ? (
@@ -67,7 +67,7 @@ export default function Welcome() {
                                         href={route('dashboard')}
                                         className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                                     >
-                                        Go to Dashboard
+                                        Ke Dashboard
                                     </Link>
                                 ) : (
                                     <>
@@ -75,13 +75,13 @@ export default function Welcome() {
                                             href={route('login')}
                                             className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                                         >
-                                            Log in
+                                            Masuk
                                         </Link>
                                         <Link
                                             href={route('register')}
                                             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                                         >
-                                            Register
+                                            Daftar
                                         </Link>
                                     </>
                                 )}
@@ -95,11 +95,11 @@ export default function Welcome() {
                     <div className="max-w-7xl mx-auto text-center">
                         <div className="mb-8">
                             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                                🏘️ Digital Village Management System
+                                🏘️ Sistem Manajemen Desa Digital
                             </h1>
                             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                                Comprehensive SaaS platform for managing village and citizen data digitally. 
-                                Support multi-tenancy with complete administrative workflows from RT to Village Head.
+                                Platform SaaS komprehensif untuk mengelola data desa dan warga secara digital. 
+                                Mendukung multi-tenancy dengan alur administratif lengkap dari RT hingga Kepala Desa.
                             </p>
                         </div>
 
@@ -110,13 +110,13 @@ export default function Welcome() {
                                         href={route('register')}
                                         className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
                                     >
-                                        🚀 Start Free Trial
+                                        🚀 Mulai Gratis
                                     </Link>
                                     <Link
                                         href={route('login')}
                                         className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700"
                                     >
-                                        📊 View Demo
+                                        📊 Lihat Demo
                                     </Link>
                                 </>
                             )}
@@ -126,19 +126,19 @@ export default function Welcome() {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                                 <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
-                                <div className="text-gray-600 dark:text-gray-300">Villages Served</div>
+                                <div className="text-gray-600 dark:text-gray-300">Desa Terlayani</div>
                             </div>
                             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                                 <div className="text-3xl font-bold text-green-600 mb-2">50K+</div>
-                                <div className="text-gray-600 dark:text-gray-300">Citizens Managed</div>
+                                <div className="text-gray-600 dark:text-gray-300">Warga Terkelola</div>
                             </div>
                             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                                 <div className="text-3xl font-bold text-purple-600 mb-2">25K+</div>
-                                <div className="text-gray-600 dark:text-gray-300">Letters Processed</div>
+                                <div className="text-gray-600 dark:text-gray-300">Surat Diproses</div>
                             </div>
                             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                                 <div className="text-3xl font-bold text-orange-600 mb-2">99.9%</div>
-                                <div className="text-gray-600 dark:text-gray-300">Uptime</div>
+                                <div className="text-gray-600 dark:text-gray-300">Waktu Aktif</div>
                             </div>
                         </div>
                     </div>
@@ -149,10 +149,10 @@ export default function Welcome() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                                ✨ Comprehensive Features
+                                ✨ Fitur Lengkap
                             </h2>
                             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                                Everything you need to digitize and streamline village administration
+                                Semua yang Anda butuhkan untuk digitalisasi dan menyederhanakan administrasi desa
                             </p>
                         </div>
 
@@ -177,32 +177,32 @@ export default function Welcome() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                                🔄 Letter Processing Workflow
+                                🔄 Alur Proses Surat
                             </h2>
                             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                                Streamlined approval process from citizen request to completion
+                                Proses persetujuan yang disederhanakan dari pengajuan warga hingga selesai
                             </p>
                         </div>
 
                         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
                             <div className="bg-blue-100 dark:bg-blue-900/30 px-6 py-4 rounded-lg">
-                                📝 Citizen Submit
+                                📝 Warga Ajukan
                             </div>
                             <div className="text-2xl">→</div>
                             <div className="bg-yellow-100 dark:bg-yellow-900/30 px-6 py-4 rounded-lg">
-                                ✅ RT Approval
+                                ✅ Persetujuan RT
                             </div>
                             <div className="text-2xl">→</div>
                             <div className="bg-orange-100 dark:bg-orange-900/30 px-6 py-4 rounded-lg">
-                                🔄 Admin Process
+                                🔄 Proses Admin
                             </div>
                             <div className="text-2xl">→</div>
                             <div className="bg-green-100 dark:bg-green-900/30 px-6 py-4 rounded-lg">
-                                👨‍💼 Village Head
+                                👨‍💼 Kepala Desa
                             </div>
                             <div className="text-2xl">→</div>
                             <div className="bg-purple-100 dark:bg-purple-900/30 px-6 py-4 rounded-lg">
-                                ✨ Completed
+                                ✨ Selesai
                             </div>
                         </div>
                     </div>
@@ -213,10 +213,10 @@ export default function Welcome() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                                👥 Role-Based Access Control
+                                👥 Kontrol Akses Berbasis Peran
                             </h2>
                             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                                Different access levels for each role in village administration
+                                Level akses yang berbeda untuk setiap peran dalam administrasi desa
                             </p>
                         </div>
 
@@ -239,10 +239,10 @@ export default function Welcome() {
                 <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl font-bold text-white mb-4">
-                            Ready to Digitize Your Village?
+                            Siap Digitalkan Desa Anda?
                         </h2>
                         <p className="text-blue-100 text-xl mb-8">
-                            Join hundreds of villages already using our platform to streamline their administration
+                            Bergabunglah dengan ratusan desa yang sudah menggunakan platform kami untuk menyederhanakan administrasi mereka
                         </p>
                         {!auth.user && (
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -250,13 +250,13 @@ export default function Welcome() {
                                     href={route('register')}
                                     className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
                                 >
-                                    🚀 Start Your Free Trial
+                                    🚀 Mulai Gratis Sekarang
                                 </Link>
                                 <Link
                                     href={route('login')}
                                     className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg"
                                 >
-                                    📞 Contact Sales
+                                    📞 Hubungi Sales
                                 </Link>
                             </div>
                         )}
@@ -267,15 +267,15 @@ export default function Welcome() {
                 <footer className="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto text-center">
                         <div className="mb-8">
-                            <h3 className="text-2xl font-bold text-white mb-4">🏘️ VillageHub</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4">🏘️ DesaHub</h3>
                             <p className="text-gray-400 max-w-2xl mx-auto">
-                                Empowering villages with digital transformation. Secure, scalable, and easy to use.
+                                Memberdayakan desa dengan transformasi digital. Aman, scalable, dan mudah digunakan.
                             </p>
                         </div>
                         
                         <div className="border-t border-gray-700 pt-8">
                             <p className="text-gray-400">
-                                Built with ❤️ for Indonesian villages. © 2024 VillageHub. All rights reserved.
+                                Dibuat dengan ❤️ untuk desa-desa Indonesia. © 2024 DesaHub. Hak cipta dilindungi.
                             </p>
                         </div>
                     </div>

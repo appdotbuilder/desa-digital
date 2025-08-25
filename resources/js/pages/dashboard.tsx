@@ -106,17 +106,17 @@ export default function Dashboard({
 
     return (
         <AppShell>
-            <Head title="Dashboard - Village Information System" />
+            <Head title="Dashboard - Sistem Informasi Desa" />
             
             <div className="py-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
                     <div className="mb-8">
                         <Heading 
-                            title={`📊 ${is_super_admin ? 'System Overview' : 'Village Dashboard'}`}
+                            title={`📊 ${is_super_admin ? 'Ringkasan Sistem' : 'Dashboard Desa'}`}
                             description={is_super_admin 
-                                ? 'Global system statistics and management'
-                                : 'Real-time village statistics and recent activities'
+                                ? 'Statistik sistem global dan manajemen'
+                                : 'Statistik desa real-time dan aktivitas terkini'
                             }
                         />
                     </div>
@@ -126,25 +126,25 @@ export default function Dashboard({
                         {is_super_admin ? (
                             <>
                                 <StatCard 
-                                    title="Total Villages" 
+                                    title="Total Desa" 
                                     value={stats.total_villages || 0} 
                                     icon="🏘️"
                                     color="bg-blue-500"
                                 />
                                 <StatCard 
-                                    title="Active Villages" 
+                                    title="Desa Aktif" 
                                     value={stats.active_villages || 0} 
                                     icon="✅"
                                     color="bg-green-500"
                                 />
                                 <StatCard 
-                                    title="Total Users" 
+                                    title="Total Pengguna" 
                                     value={stats.total_users || 0} 
                                     icon="👥"
                                     color="bg-purple-500"
                                 />
                                 <StatCard 
-                                    title="Total Citizens" 
+                                    title="Total Warga" 
                                     value={stats.total_citizens || 0} 
                                     icon="👤"
                                     color="bg-orange-500"
@@ -153,25 +153,25 @@ export default function Dashboard({
                         ) : (
                             <>
                                 <StatCard 
-                                    title="Total Citizens" 
+                                    title="Total Warga" 
                                     value={stats.total_citizens || 0} 
                                     icon="👥"
                                     color="bg-blue-500"
                                 />
                                 <StatCard 
-                                    title="Pending Letters" 
+                                    title="Surat Menunggu" 
                                     value={stats.pending_letters || 0} 
                                     icon="📝"
                                     color="bg-yellow-500"
                                 />
                                 <StatCard 
-                                    title="Completed Letters" 
+                                    title="Surat Selesai" 
                                     value={stats.completed_letters || 0} 
                                     icon="✅"
                                     color="bg-green-500"
                                 />
                                 <StatCard 
-                                    title="Published News" 
+                                    title="Berita Terbit" 
                                     value={stats.published_news || 0} 
                                     icon="📰"
                                     color="bg-purple-500"
@@ -187,17 +187,17 @@ export default function Dashboard({
                                 {/* Demographics */}
                                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                                        👥 Demographics by Gender
+                                        👥 Demografi Berdasarkan Gender
                                     </h3>
                                     <div className="space-y-4">
                                         <div className="flex justify-between items-center">
-                                            <span className="text-gray-600 dark:text-gray-300">👨 Male</span>
+                                            <span className="text-gray-600 dark:text-gray-300">👨 Laki-laki</span>
                                             <span className="font-semibold text-blue-600">
                                                 {demographics.male_citizens || 0}
                                             </span>
                                         </div>
                                         <div className="flex justify-between items-center">
-                                            <span className="text-gray-600 dark:text-gray-300">👩 Female</span>
+                                            <span className="text-gray-600 dark:text-gray-300">👩 Perempuan</span>
                                             <span className="font-semibold text-pink-600">
                                                 {demographics.female_citizens || 0}
                                             </span>
@@ -217,23 +217,23 @@ export default function Dashboard({
                                 {age_groups && (
                                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                                            📊 Age Distribution
+                                            📊 Distribusi Usia
                                         </h3>
                                         <div className="space-y-4">
                                             <div className="flex justify-between items-center">
-                                                <span className="text-gray-600 dark:text-gray-300">👶 Children (&lt;18)</span>
+                                                <span className="text-gray-600 dark:text-gray-300">👶 Anak-anak (&lt;18)</span>
                                                 <span className="font-semibold text-green-600">
                                                     {age_groups.anak || 0}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center">
-                                                <span className="text-gray-600 dark:text-gray-300">🧑 Adults (18-60)</span>
+                                                <span className="text-gray-600 dark:text-gray-300">🧑 Dewasa (18-60)</span>
                                                 <span className="font-semibold text-blue-600">
                                                     {age_groups.dewasa || 0}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center">
-                                                <span className="text-gray-600 dark:text-gray-300">👴 Elderly (&gt;60)</span>
+                                                <span className="text-gray-600 dark:text-gray-300">👴 Lansia (&gt;60)</span>
                                                 <span className="font-semibold text-orange-600">
                                                     {age_groups.lansia || 0}
                                                 </span>
@@ -247,7 +247,7 @@ export default function Dashboard({
                             {rt_rw_stats.length > 0 && (
                                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 mb-8">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                                        🏘️ Population by RT/RW
+                                        🏘️ Populasi per RT/RW
                                     </h3>
                                     <div className="overflow-x-auto">
                                         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -260,7 +260,7 @@ export default function Dashboard({
                                                         RT
                                                     </th>
                                                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                                        Citizens
+                                                        Warga
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -290,7 +290,7 @@ export default function Dashboard({
                                 {recent_letters.length > 0 && (
                                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                                            📝 Recent Letters
+                                            📝 Surat Terbaru
                                         </h3>
                                         <div className="space-y-4">
                                             {recent_letters.slice(0, 5).map((letter) => (
@@ -300,7 +300,10 @@ export default function Dashboard({
                                                             {letter.jenis_surat}
                                                         </h4>
                                                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(letter.status)}`}>
-                                                            {letter.status}
+                                                            {letter.status === 'completed' ? 'Selesai' : 
+                                                             letter.status === 'pending' ? 'Menunggu' :
+                                                             letter.status === 'rejected' ? 'Ditolak' :
+                                                             letter.status}
                                                         </span>
                                                     </div>
                                                     <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -319,7 +322,7 @@ export default function Dashboard({
                                 {recent_news.length > 0 && (
                                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                                            📰 Recent News
+                                            📰 Berita Terbaru
                                         </h3>
                                         <div className="space-y-4">
                                             {recent_news.map((news) => (
@@ -328,7 +331,7 @@ export default function Dashboard({
                                                         {news.judul}
                                                     </h4>
                                                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                                                        By {news.admin_input.name}
+                                                        Oleh {news.admin_input.name}
                                                     </p>
                                                     <p className="text-xs text-gray-500 dark:text-gray-400">
                                                         {formatDate(news.published_at)}
